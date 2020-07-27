@@ -1,0 +1,25 @@
+/* pages/radiostation/radiostation.wxss */
+/* 图标区域 */
+.container{
+    display: grid;
+    grid-template-columns: repeat(3,33.33%);
+}
+.djcate{
+    height: 250rpx;
+    border-bottom: 1px solid #cccccc50;
+    padding: 50rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.djimg{
+    width: 56rpx;
+    height: 56rpx;
+}
+.djicon{
+    width: 56rpx;
+    height: 56rpx;
+    /* background-color: pink; */
+    margin-bottom: 20rpx;
+}

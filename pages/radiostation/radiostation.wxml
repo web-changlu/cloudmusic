@@ -1,0 +1,12 @@
+<!--pages/radiostation/radiostation.wxml-->
+<view  class="container" hover-class="none" hover-stop-propagation="false">
+    <view wx:for="{{radiolist}}" wx:key="id" class="djcate" hover-class="none" hover-stop-propagation="false">
+        <view class="djicon" hover-class="none" hover-stop-propagation="false">
+            <image class="djimg" src="{{item.pic56x56Url}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+                
+            </image>
+        </view>
+        <view class="dji" hover-class="none" hover-stop-propagation="false">{{item.name}}
+        </view>
+    </view>
+</view>

@@ -1,0 +1,6 @@
+<view class="search_input">
+    <navigator class="search" url="/pages/search/search"  open-type="navigate">
+        <text class="iconfont icon-search"></text>        
+        <text>请输入歌手或者歌曲名</text>
+    </navigator>
+</view>

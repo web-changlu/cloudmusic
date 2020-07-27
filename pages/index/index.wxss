@@ -1,0 +1,165 @@
+/**index.wxss**/
+/* view{
+  color: var(--themeColor);
+} */
+.index_swiper{
+  width: 750rpx;
+  height: 280rpx;
+}
+.bannerimg{
+  width: 100%;
+}
+.index_nav{
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.index_nav navigator{
+  flex: 1;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.nav_vie{
+  width: 100rpx;
+  height: 100rpx;
+  padding: 20rpx;
+  background-color: var(--themeColor);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.nav_vie image {
+  width: 120rpx;
+  height: 60rpx;
+}
+.index_newsong{
+  /* margin-top: 20rpx; */
+  padding: 20rpx;
+}
+.newsong{
+  font-weight: 700;
+  font-size: 32rpx;
+  margin-bottom: 20rpx;
+}
+/* .newsonglist{
+  display: flex;
+  height: 100rpx;
+} */
+.song_item{
+  display: flex;
+  height: 100rpx;
+  margin-bottom: 20rpx;
+}
+.songimg{
+  flex: 1;
+}
+.songbox{
+  flex: 5;
+  padding-left: 30rpx;
+  /* display: flex;
+  align-items: center; */
+}
+.song_title{
+  height: 60rpx;
+  color: black;
+  line-height: 60rpx;
+}
+.song_songer{
+  height: 40rpx;
+  line-height: 40rpx;
+  color: #66666695;
+}
+.bf{
+  flex: 1;
+  color: var(--themeColor);
+  line-height: 100rpx;
+}
+.songimgurl{
+  width: 100%;
+  height: 100%;
+  border-radius: 20rpx;
+
+}
+.diantailist{
+  display: flex;
+  height: 300rpx;
+}
+.diantaibox{
+  flex: 1;
+  /* border: 1px solid #000; */
+}
+.diantaibox:nth-child(n + 2){
+  margin-left: 20rpx;
+}
+.diantai_nav{
+  height: 230rpx;
+}
+.dtimgurl{
+  width: 100%;
+  height: 100%;
+  border-radius: 10rpx;
+}
+/* .diantai_tex{
+  margin-top: 10rpx;
+} */
+
+/* 热门歌手 */
+.module-group{
+  padding: 20rpx;
+  background-color: #fff;
+}
+.module-group .module-title{
+  font-size: 32rpx;
+  display: flex;
+  justify-content: space-between; /**字体贴着两边**/
+}
+.module-title .titlename{
+  color: #000;
+  font-weight: 700;
+}
+ 
+.module-title .more{
+  color: var(--themeColor);
+}
+.scroll-view {
+  margin-top: 20rpx;
+  width: 100%;
+  height: 100%;
+  white-space: nowrap; /** 不换行 **/
+}
+ 
+.scroll-view .item-scrollview{
+  width: 200rpx;
+  margin-right: 20rpx; /**和右边间距**/
+  display: inline-block;/** 一行展示 **/
+}
+
+/** 定制最后一个item布局 **/
+.scroll-view .item-scrollview:last-of-type{
+  margin-right: 0; /**保障不多出来一个margin-right 20rpx**/
+}
+ 
+.item-scrollview .item-group{
+  width: 100%;
+}
+ 
+.item-group .thumbnail-group{
+  width:100%;
+  height: 284rpx;
+}
+ 
+.thumbnail-group .thumbnail{
+  width: 100%;
+  height: 100%;
+}
+ 
+.item-group .movie-name{
+  font-size: 28rpx;
+  text-align: center;
+  margin-top: 20rpx;
+  text-overflow: ellipsis; /** 超出的字用省略号代替 **/
+  overflow: hidden;
+}

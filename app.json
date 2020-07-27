@@ -1,0 +1,57 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/bofang/bofang",
+    "pages/video/video",
+    "pages/me/me",
+    "pages/love/love",
+    "pages/search/search",
+    "pages/songsheet/songsheet",
+    "pages/rankinglist/rankinglist",
+    "pages/radiostation/radiostation",
+    "pages/fm/fm",
+    "pages/newsong/newsong" 
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#DD001B",
+    "navigationBarTitleText": "云音乐",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar": {
+    "color": "#161616",
+    "selectedColor": "#DD001B",
+    "backgroundColor": "#fff",
+    "position": "bottom",
+    "borderStyle": "black",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "./images/music.png",
+        "selectedIconPath": "./images/music-on.png"
+      },
+      {
+        "pagePath": "pages/bofang/bofang",
+        "text": "播放",
+        "iconPath": "./images/bofang.png",
+        "selectedIconPath": "./images/bofang-on.png"
+      },
+      {
+        "pagePath": "pages/video/video",
+        "text": "MV",
+        "iconPath": "./images/video.png",
+        "selectedIconPath": "./images/video-on.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "./images/my.png",
+        "selectedIconPath": "./images/my-on.png"
+      }
+    ]
+  },
+  
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

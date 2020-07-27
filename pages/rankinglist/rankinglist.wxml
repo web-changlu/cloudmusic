@@ -1,0 +1,55 @@
+<!--pages/rankinglist/rankinglist.wxml-->
+<!-- 推荐榜单start -->
+<view class="tuijianbox" hover-class="none" >
+    <text class="tuijiantitle" selectable="false" space="false" decode="false">
+        榜单推荐
+    </text>
+    <view class="tuijianlist" hover-class="none" hover-stop-propagation="false">
+        <navigator class="tuijian_nav" target="" url="" hover-class="navigator-hover" open-type="navigate" wx:for="{{tuijian}}" wx:key="id">
+            <image class="tuijian_img" src="{{item.coverImgUrl}}" mode="scaleToFill" lazy-load="false" binderror="" bindload="">
+                
+            </image>
+            <text class="" selectable="false" space="false" decode="false">{{item.name}}
+            </text>
+        </navigator>
+    </view>
+</view>
+<!-- 推荐榜单end -->
+<!-- 官方榜单start -->
+<view class="ranking" hover-class="none" >
+    <text class="tuijiantitle" selectable="false" space="false" decode="false">官方榜
+    </text>
+    <view class="bangdanlist" hover-class="none" hover-stop-propagation="false">
+        <navigator class="bangdan" target="" url="" hover-class="navigator-hover" open-type="navigate" wx:for="{{guanfang}}" wx:key="id">
+            <image class="bangdan_img" src="{{item.coverImgUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+                
+            </image>
+            <view class="song" hover-class="none" hover-stop-propagation="false">
+               <view class="song_text" hover-class="none" hover-stop-propagation="false">
+                   {{item.tracks[0].first}} - {{item.tracks[0].second}}
+               </view>
+               <view class="song_text" hover-class="none" hover-stop-propagation="false">
+                   {{item.tracks[1].first}} - {{item.tracks[1].second}}
+               </view>
+               <view class="song_text" hover-class="none" hover-stop-propagation="false">
+                   {{item.tracks[2].first}} - {{item.tracks[2].second}}
+               </view>
+            </view>
+        </navigator>
+    </view>
+</view>
+<!-- 官方榜单end -->
+<!-- 更多榜单start -->
+<view class="sheet" hover-class="none" >
+    <text class="moretitle" selectable="false" space="false" decode="false">更多榜单
+    </text>
+    <navigator class="sheetbox" wx:for="{{more}}" wx:key="id">
+        <image class="sheet_img" src="{{item.coverImgUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+            
+        </image>
+        <text class="sheet_text" selectable="false" space="false" decode="false">
+            {{item.name}}
+        </text>
+    </navigator>
+</view>
+<!-- 更多榜单end -->

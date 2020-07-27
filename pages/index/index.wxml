@@ -1,0 +1,128 @@
+<!--index.wxml-->
+<view class="music_index">
+     <!-- 搜索框  -->
+    <SearchInput></SearchInput>
+    <!-- 轮播图 -->
+    <view class="index_banner" >
+        <swiper class="index_swiper" autoplay="{{true}}" indicator-dots="{{true}}"  circular="{{true}}">
+            <swiper-item  wx:for="{{banner}}" wx:key="targetId">
+                <navigator  url="" open-type="navigate">
+                    <image mode="widthFix" class="bannerimg" src="{{item.imageUrl}}">
+                    </image>
+                </navigator>
+            </swiper-item>
+        </swiper>
+    </view>
+    <!-- 导航栏start -->
+    <view class="index_nav" hover-class="none" hover-stop-propagation="false">
+        <navigator  url="/pages/songsheet/songsheet"  open-type="navigate">
+           <view class="nav_vie" hover-class="none" hover-stop-propagation="false">
+               <image src="../../images/songsheet.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" >
+               
+                </image>
+           </view>
+           <text  selectable="false" space="false" decode="false">
+               歌单
+           </text>
+        </navigator>
+        <navigator  url="/pages/rankinglist/rankinglist" open-type="navigate">
+           <view class="nav_vie" hover-class="none" hover-stop-propagation="false">
+               <image class="" src="../../images/paihangbang.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+               
+                </image>
+           </view>
+           <text class="" selectable="false" space="false" decode="false">
+               排行榜
+           </text>
+        </navigator>
+        <navigator  url="/pages/radiostation/radiostation" open-type="navigate">
+           <view class="nav_vie" hover-class="none" hover-stop-propagation="false">
+               <image class="" src="../../images/dt.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+               
+                </image>
+           </view>
+           <text class="" selectable="false" space="false" decode="false">
+               电台
+           </text>
+        </navigator>
+        <navigator url="/pages/fm/fm" open-type="navigate">
+           <view class="nav_vie" hover-class="none" hover-stop-propagation="false">
+               <image class="" src="../../images/fm.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+               
+                </image>
+           </view>
+           <text class="" selectable="false" space="false" decode="false">
+               FM
+           </text>
+        </navigator>
+    </view>
+    <!-- 导航栏end -->
+    <!-- 最新音乐start -->
+    <view class="index_newsong" hover-class="none" >
+        <navigator class="newsong"  url="/pages/newsong/newsong" open-type="navigate">
+            最新发布
+        </navigator>
+        <view class="newsonglist" >
+            <navigator wx:for="{{newsong}}" wx:key="id" class="song_item" target="" url="" hover-class="navigator-hover" open-type="navigate">
+                <view class="songimg" >
+                <image class="songimgurl" src="{{item.picUrl}}" mode="aspectFit" lazy-load="false" binderror="" bindload="">
+                    
+                </image>
+            </view>
+            <view class="songbox" >
+                    <text class="song_title"  selectable="false" space="false" decode="false">{{item.name}}  
+                    </text>
+                    <text class="song_songer"  selectable="false" space="false" decode="false">{{item.song.artists[0].name}}
+                    </text>
+            </view>
+            <view class="bf iconfont icon-bo_fang-copy" >
+            </view>
+            </navigator>
+        </view>
+    </view>
+    <!-- 最新音乐end -->
+    <!-- 电台推荐start -->
+    <view class="index_newsong" hover-class="none" >
+        <navigator class="newsong"  url="/pages/radiostation/radiostation" open-type="navigate">
+            电台推荐
+        </navigator>
+        <view class="diantailist">
+            <view wx:for="{{diantai}}" wx:key="id" class="diantaibox" hover-class="none">
+                <navigator class="diantai_nav"  url="/pages/radiostation/radiostation" open-type="navigate">
+                    <image class="dtimgurl" src="{{item.picUrl}}" mode="aspectFit" lazy-load="false" binderror="" bindload="">
+                        
+                    </image>
+                    <text class="diantai_tex" selectable="false" space="false" decode="false">{{item.rcmdtext}}
+                    </text>
+                </navigator>
+                <!-- <text class="diantai_tex" selectable="false" space="false" decode="false">
+                    {{item.rcmdtext}}
+                </text> -->
+            </view>
+        </view>
+    </view>
+    <!-- 电台推荐end -->
+    <!-- 热门歌手start -->
+    
+    <view class="module-group">
+    
+        <view class="module-title">
+            <view class="titlename">热门歌手</view>
+            <!--“更多”点击跳转的-->
+            <navigator class="more">更多>></navigator>
+        </view>
+    
+        <scroll-view class="scroll-view" scroll-x="{{true}}">
+            <navigator class=" item-scrollview" wx:for="{{songer}}" wx:key="id">
+            <view class="item-group ">
+                <view class="thumbnail-group ">
+                <image class="thumbnail " src="{{item.img1v1Url}}">
+                </image>
+                </view>
+                <view class="movie-name ">{{item.name}}</view> 
+            </view>
+            </navigator>
+        </scroll-view>
+    </view>
+    <!-- 热门歌手end -->
+</view>

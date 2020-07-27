@@ -1,0 +1,11 @@
+<!--pages/songsheet/songsheet.wxml-->
+<view class="sheet" hover-class="none" >
+    <navigator class="sheetbox" wx:for="{{list}}" wx:key="id">
+        <image class="sheet_img" src="{{item.coverImgUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+            
+        </image>
+        <text class="sheet_text" selectable="false" space="false" decode="false">
+            {{item.name}}
+        </text>
+    </navigator>
+</view>
