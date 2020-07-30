@@ -13,35 +13,18 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getsongsheet()
+    this.getNewEst()
   },
-  getsongsheet: function() {
-    API.getsongsheet().then(res => {
+  getNewEst: function() {
+    API.getNewEst().then(res => {
       if (res.code === 200) { //更加严谨
-        let list = res.playlists
+        let list = res.albums
         this.setData({
           list: list
         })
-        // console.log(list)
+        console.log(list)
       }
     })
-  },
-  handleSheet: function(e) { //e 对象，自带，点击事件后触发，event有type,target，timeStamp，currentTarget属性
-    // console.log(e.currentTarget.dataset.id)
-    let app =  getApp();
-    
-    let id = e.currentTarget.dataset.id
-    app.globalData.defaultgdId = id
-    // wx.navigateTo({
-    //   url: ``
-    // });
-    wx.switchTab({url:`../bofang/bofang`,
-      success: function(e) {
-        let page =  getCurrentPages().pop()
-        if(page == undefined || page == null) return
-        page.onLoad()
-        
-      }})
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

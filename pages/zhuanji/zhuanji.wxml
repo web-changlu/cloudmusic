@@ -1,0 +1,18 @@
+<!--pages/zhuanji/zhuanji.wxml-->
+<!-- 最新专辑start -->
+<view class="sheet" hover-class="none" >
+    <text class="moretitle" selectable="false" space="false" decode="false">最新专辑 >
+    </text>
+    <navigator class="sheetbox" wx:for="{{list}}" wx:key="id">
+        <image class="sheet_img" src="{{item.picUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+            
+        </image>
+        <view class="" hover-class="none" hover-stop-propagation="false">
+            <text class="sheet_text" selectable="false" space="false" decode="false">{{item.name}}
+        </text>
+        <text class="com" selectable="false" space="false" decode="false">{{item.company}}
+        </text>
+        </view>
+    </navigator>
+</view>
+<!-- 最新专辑end -->

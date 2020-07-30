@@ -1,2 +1,25 @@
 <!--pages/bofang/bofang.wxml-->
-<text>pages/bofang/bofang.wxml</text>
+<view class="songlist" hover-class="none" hover-stop-propagation="false">
+    <view class="song" hover-class="none" hover-stop-propagation="false" wx:for="{{songList}}" wx:for-index="i" wx:key="id" >
+        <view class="songindex" hover-class="none" hover-stop-propagation="false" bindtap='handleSheet' data-id="{{item.id}}">
+            {{i+1}}
+        </view>
+        <view class="left" hover-class="none" hover-stop-propagation="false" bindtap='handleSheet' data-id="{{item.id}}">
+            <image class="" src="{{item.al.picUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="" >
+                
+            </image>
+        </view>
+        <view class="right" hover-class="none" hover-stop-propagation="false" bindtap='handleSheet' data-id="{{item.id}}">
+            <view class="top" hover-class="none" hover-stop-propagation="false">
+                <text class="fl yc" selectable="false" space="false" decode="false">{{item.name}} 
+                </text>
+                <text class="chucu fl yc" selectable="false" space="false" decode="false">{{item.alia[0]?"(":""}}{{item.alia[0]?item.alia[0]:""}}{{item.alia[0]?")":""}}
+                </text>
+            </view>
+            <view class="boo" hover-class="none" hover-stop-propagation="false">
+            </view>
+                <text class="chucu fl yc" selectable="false" space="false" decode="false">{{item.ar[0].name}} - {{item.al.name?item.al.name:''}}
+                </text>
+            </view>
+    </view>
+</view>

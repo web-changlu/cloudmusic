@@ -34,6 +34,9 @@ App({
     })
   },
   globalData: {
-    userInfo: null
+    userInfo: null,
+    defaultgdId:0,
+    waitForPlaying:[],
+    songId:0
   }
 })

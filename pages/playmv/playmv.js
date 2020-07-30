@@ -1,7 +1,5 @@
 // pages/radiostation/radiostation.js
 const API = require('../../API/api.js')
-const API_BASE_URL = 'http://musicapi.leanapp.cn'
-let app = getApp()
 Page({
 
   /**
@@ -9,54 +7,24 @@ Page({
    */
   data: {
     tjmv: [],
-    newmv: [],
-    defaultId: 691548662,
-    songList:[],
-    suoy:1
+    newmv: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    wx.showLoading({
-      title: '加载中',
-    });
-    // console.log(options);
-    let defaultId = app.globalData.defaultgdId === 0?691548662:app.globalData.defaultgdId
-    console.log(app.globalData.defaultgdId)
-
-    wx.request({
-      url: API_BASE_URL + '/playlist/detail',
-      data: {
-        id: defaultId    
-      },
-      success: res => {
-        const waitForPlay = new Array;
-        for (let i = 0; i <= res.data.playlist.trackIds.length - 1;i++){ //循环打印出其id
-          waitForPlay.push(res.data.playlist.trackIds[i].id) //循环push ID 到waitForPlay数组
-          app.globalData.waitForPlaying = waitForPlay  //让waitForPlay数组给全局数组
-        }
-        console.log(res.data.playlist.tracks)
-        wx.hideLoading()
-        this.setData({
-          songList: res.data.playlist.tracks
-        })  
-      }
-    })
-    
-    // this.getSongList(defaultId)
+    this.getRecommendMV()
+    this.getNewMv()
   },
-  getSongList: function(val) {
-    API.getSongList({
-      id: val
-    }).then(res => {
+  getRecommendMV: function() {
+    API.getRecommendMV().then(res => {
       if (res.code === 200) { //更加严谨
-        let list = res
+        let list = res.result
         this.setData({
           tjmv: list
         })
-        console.log(list)
+        // console.log(list)
       }
     })
   },
@@ -77,7 +45,7 @@ Page({
     // console.log(e.currentTarget.dataset.id)
     let id = e.currentTarget.dataset.id
     wx.navigateTo({
-      url: `../music/music?id=${id}`
+      url: `../video/video?id=${id}`
     });
   },
   /**

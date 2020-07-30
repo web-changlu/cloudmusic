@@ -67,8 +67,8 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "pages/radiostation/radiostation",
-					"pathName": "pages/radiostation/radiostation",
+					"name": "pages/bofang/bofang",
+					"pathName": "pages/bofang/bofang",
 					"query": "",
 					"scene": null
 				}

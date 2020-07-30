@@ -148,7 +148,7 @@
  
 .item-group .thumbnail-group{
   width:100%;
-  height: 284rpx;
+  height: 240rpx;
 }
  
 .thumbnail-group .thumbnail{

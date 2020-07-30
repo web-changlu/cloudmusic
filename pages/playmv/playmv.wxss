@@ -1,0 +1,56 @@
+/* pages/playmv/playmv.wxss */
+.tjmv{
+    padding: 20rpx;
+    font-size: 36rpx;
+}
+.mvlist{
+    width: 100%;
+    /* border: 1px solid #ccc; */
+    /* padding: 20rpx; */
+}
+.tj{
+    width: 100%;
+    height: 300rpx;
+    margin-bottom: 20rpx;
+}
+.mvimg{
+    width: 100%;
+    height: 100%;
+    border-radius: 15rpx;
+    position: relative;
+}
+.mvtex{
+    position: absolute;
+    bottom: 0;
+    padding-left: 20rpx;
+    z-index: 9;
+    font-size: 24rpx;
+    line-height: 36rpx;
+    width: 100%;
+    color: aliceblue;
+    background-color: #00000080;
+}
+.newmvlist{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.newmv{
+    width: 50%;
+    /* height: 5000rpx; */
+    /* border: 1px solid #ccc; */
+}
+.mvt{
+    font-size: 24rpx;
+    line-height: 24rpx;
+    padding-left: 20rpx;
+}
+.newmvimg{
+    width: 100%;
+    height: 240rpx;
+    border-radius: 15rpx;
+    padding: 10rpx;
+}
+.teshu{
+    color: #ccc;
+}

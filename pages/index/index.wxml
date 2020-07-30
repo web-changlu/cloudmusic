@@ -45,14 +45,14 @@
                电台
            </text>
         </navigator>
-        <navigator url="/pages/fm/fm" open-type="navigate">
+        <navigator url="/pages/zhuanji/zhuanji" open-type="navigate">
            <view class="nav_vie" hover-class="none" hover-stop-propagation="false">
-               <image class="" src="../../images/fm.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+               <image class="" src="../../images/zhuanji.png" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
                
                 </image>
            </view>
            <text class="" selectable="false" space="false" decode="false">
-               FM
+               专辑
            </text>
         </navigator>
     </view>

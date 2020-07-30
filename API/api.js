@@ -83,5 +83,8 @@ module.exports ={
   getSonger:(data)=>{
     return request('/toplist/artist',data)//歌手排行
   },
+  getSongList:(data)=>{
+    return request('/playlist/detail',data)//歌曲列表
+  }
  
 }

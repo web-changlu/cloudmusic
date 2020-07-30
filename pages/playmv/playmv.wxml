@@ -1,0 +1,30 @@
+<!--pages/playmv/playmv.wxml-->
+<!-- 推荐MV start -->
+<view class="tjmv" hover-class="none" hover-stop-propagation="false">
+          推荐MV
+    <view class="mvlist" hover-class="none" hover-stop-propagation="false">
+        <view class="tj" wx:for="{{tjmv}}" wx:key="id" bindtap='handleSheet' data-id="{{item.id}}">
+            <image class="mvimg" src="{{item.picUrl}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+                <text class="mvtex" selectable="false" space="false" decode="false">
+                {{item.name}} - {{item.artistName}}
+                {{item.copywriter}}
+                </text>
+            </image>
+        </view>
+    </view>
+</view>
+<!-- 推荐MV end -->
+<!-- 最新MV start  -->
+<view class="tjmv" hover-class="none" hover-stop-propagation="false">
+    最新MV
+    <view class="newmvlist">
+        <view class="newmv" hover-class="none" hover-stop-propagation="false" wx:for="{{newmv}}" wx:key="id"  bindtap='handleSheet' data-id="{{item.id}}">
+            <image class="newmvimg" src="{{item.cover}}" mode="aspectFit|aspectFill|widthFix" lazy-load="false" binderror="" bindload="">
+                
+            </image><text class="mvt" selectable="false" space="false" decode="false">{{item.name}}
+            </text><text class="mvt teshu" selectable="false" space="false" decode="false">{{item.artistName}}
+            </text>
+        </view>
+    </view>
+</view>
+<!-- 最新MV  end-->

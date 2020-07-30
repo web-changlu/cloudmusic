@@ -1,8 +1,10 @@
 {
-  "pages":[
+  "pages":[ 
     "pages/index/index",
     "pages/bofang/bofang",
     "pages/video/video",
+    "pages/music/music",
+    "pages/playmv/playmv",
     "pages/me/me",
     "pages/love/love",
     "pages/search/search",
@@ -10,6 +12,7 @@
     "pages/rankinglist/rankinglist",
     "pages/radiostation/radiostation",
     "pages/fm/fm",
+    "pages/zhuanji/zhuanji", 
     "pages/newsong/newsong" 
   ],
   "window":{
@@ -38,7 +41,7 @@
         "selectedIconPath": "./images/bofang-on.png"
       },
       {
-        "pagePath": "pages/video/video",
+        "pagePath": "pages/playmv/playmv",
         "text": "MV",
         "iconPath": "./images/video.png",
         "selectedIconPath": "./images/video-on.png"
